@@ -1,0 +1,33 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x0 = float(input("Introduzca la posición inicial en metros: "))
+v0 = float(input("Introduzca la velocidad inicial en metros por segundo: "))
+a = float(input("Introduzca la aceleración en metros por segundo al cuadrado: "))
+t_total = float(input("Introduzca el tiempo total en segundos: "))
+
+# Crear un arreglo de tiempo desde 0 hasta t_total con un paso de 0.1 segundos para mayor resolución
+t = np.linspace(0, t_total, 100)
+
+# Ecuación de la posición de la partícula en movimiento uniformemente acelerado
+x = x0 + v0*t + 0.5*a*(t**2)
+
+# Crear la figura y los ejes
+plt.figure(figsize=(10, 6))
+
+# Graficar la posición en función del tiempo
+plt.plot(t, x, label="Posición de la partícula", color='b')
+
+# Agregar etiquetas y título
+plt.title('Movimiento de una partícula en movimiento uniformemente acelerado')
+plt.xlabel('Tiempo (s)')
+plt.ylabel('Posición (m)')
+
+# Mostrar leyenda
+plt.legend()
+
+# Mostrar la cuadrícula
+plt.grid(True)
+
+# Mostrar el gráfico
+plt.show()
