@@ -1,0 +1,5 @@
+phrase = input(str ("Introduzca una frase: "))
+split_phrase = phrase.split(' ')
+reversed_phrase = reversed (split_phrase)
+join_phrase =' '.join(reversed_phrase)
+print(str(join_phrase))
