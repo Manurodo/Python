@@ -1,44 +1,47 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from ipywidgets import interactive, FloatSlider
-import matplotlib.animation as animation
+from matplotlib.widgets import Slider
+print("En este programa se calculará la posición de una partícula suponiendo un movimiento uniformemente acelerado")
+#Crear gráfico
+fig, ax = plt.subplots(figsize=(10, 6))
+plt.subplots_adjust(left=0.1, bottom=0.35)  #Ajustar sliders
 
-# Función que grafica el movimiento de la partícula
-def graficar_movimiento(x0, v0, a, t_total):
-    # Crear un arreglo de tiempo desde 0 hasta t_total con un paso de 0.1 segundos
-    t = np.linspace(0, t_total, 100)
-    
-    # Ecuación de la posición de la partícula en movimiento uniformemente acelerado
-    x = x0 + v0*t + 0.5*a*(t**2)
-    
-    # Crear la figura y los ejes
-    plt.figure(figsize=(10, 6))
-    
-    # Graficar la posición en función del tiempo
-    plt.plot(t, x, label="Posición de la partícula", color='b')
-    
-    # Agregar etiquetas y título
-    plt.title('Movimiento de una partícula en movimiento uniformemente acelerado')
-    plt.xlabel('Tiempo (s)')
-    plt.ylabel('Posición (m)')
-    
-    # Mostrar leyenda
-    plt.legend()
-    
-    # Mostrar la cuadrícula
-    plt.grid(True)
-    
-    # Mostrar el gráfico
-    plt.show()
+#Función grafico
+def grafica(x0, v0, a, t_total):
+    t = np.linspace(0, t_total, 100)  #Intervalo de tiempo
+    x = x0 + v0 * t + 0.5 * a * (t ** 2)  #Ecuación de posición de la partícula
+    ax.clear()
+    ax.plot(t, x, label="Posición de la partícula", color='b')
+    ax.set_title('Movimiento de una partícula en movimiento uniformemente acelerado')
+    ax.set_xlabel('Tiempo (s)')
+    ax.set_ylabel('Posición (m)')
+    ax.legend()
+    ax.grid(True)
 
-# Crear los sliders para los parámetros
-slider_x0 = FloatSlider(value=0.0, min=-10.0, max=10.0, step=0.1, description='Posición Inicial (m)')
-slider_v0 = FloatSlider(value=0.0, min=-10.0, max=10.0, step=0.1, description='Velocidad Inicial (m/s)')
-slider_a = FloatSlider(value=0.0, min=-10.0, max=10.0, step=0.1, description='Aceleración (m/s²)')
-slider_t_total = FloatSlider(value=10.0, min=1.0, max=20.0, step=0.1, description='Tiempo Total (s)')
+#Valores iniciales
+x0_init = 0
+v0_init = 0
+a_init = 0
+t_total_init = 10
+grafica(x0_init, v0_init, a_init, t_total_init)
 
-# Crear la interacción
-interactive_plot = interactive(graficar_movimiento, x0=slider_x0, v0=slider_v0, a=slider_a, t_total=slider_t_total)
+#Sliders para cada parámetro
+ax_x0 = plt.axes([0.25, 0.25, 0.5, 0.01], facecolor='blue')
+ax_v0 = plt.axes([0.25, 0.2, 0.5, 0.01], facecolor='blue')
+ax_a = plt.axes([0.25, 0.15, 0.5, 0.01], facecolor='blue')
+ax_t_total = plt.axes([0.25, 0.1, 0.5, 0.01], facecolor='blue')
 
-# Mostrar la interfaz interactiva
-interactive_plot
+slider_x0 = Slider(ax_x0, 'Posición Inicial (m)', 0.0, 10.0, valinit=x0_init)
+slider_v0 = Slider(ax_v0, 'Velocidad Inicial (m/s)', -10.0, 10.0, valinit=v0_init)
+slider_a = Slider(ax_a, 'Aceleración (m/s^2)', -10.0, 10.0, valinit=a_init)
+slider_t_total = Slider(ax_t_total, 'Tiempo (s)', 0.0, 20.0, valinit=t_total_init)
+
+#Actualización gráfica
+def actualizar(val):
+    grafica(slider_x0.val, slider_v0.val, slider_a.val, slider_t_total.val)
+slider_x0.on_changed(actualizar)
+slider_v0.on_changed(actualizar)
+slider_a.on_changed(actualizar)
+slider_t_total.on_changed(actualizar)
+
+plt.show()
