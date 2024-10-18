@@ -1,7 +1,7 @@
 print ("hello world")
 #this is my first program#
 
-#definir una variable ses hace de formaz directa
+#definir una variable ses hace de forma directa
 nombre = "manuel"
 edad = 18
 altura = 1.91
@@ -24,8 +24,7 @@ nombre = "manuel"
 float 
 altura = 1.91
 #floating point variable 
-complex  
-(z1 = 3 + 2i)
+complex  (z1 = 3 + 2i)
 #complex variable
 list 
 fruits = ["apple", "banana", "cherry"]
@@ -68,6 +67,9 @@ if a < 0 or b != 0 or c < 0:
 # True  
 frase = ("hola gente")
 print ("h" in frase)    #True
+
+frase = ("hola gente")
+print ("z" in frase)    #False
 
 
 
