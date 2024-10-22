@@ -24,7 +24,7 @@ nombre = "manuel"
 float 
 altura = 1.91
 #floating point variable 
-complex  (z1 = 3 + 2i)
+complex  #z1 = 3 + 2i
 #complex variable
 list 
 fruits = ["apple", "banana", "cherry"]
@@ -49,11 +49,11 @@ None
 5 < 9  # five's smaller than nine
 5 > 1  # five's greater that 1
 
-and #True if all are true
-or  #True if any is true
-not #True if statement is False
-in  #True if a value is present in a sequence
-not in #True if a value is not present in a sequence
+1 and 1#True if all are true 
+1 or 1#True if any is true
+not 1#True if statement is False
+1 in 1#True if a value is present in a sequence
+not 1 in 1#True if a value is not present in a sequence
 
 #ex:
 a=10

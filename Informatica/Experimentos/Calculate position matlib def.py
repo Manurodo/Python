@@ -16,8 +16,7 @@ def grafica(x0, v0, a, t_total):
     ax.set_xlabel('Tiempo (s)')
     ax.set_ylabel('Posición (m)')
     ax.legend()
-    ax.grid(True)
-    fig.canvas.draw_idle() 
+    ax.grid(True) 
 
 #Valores iniciales
 x0_init = 0
