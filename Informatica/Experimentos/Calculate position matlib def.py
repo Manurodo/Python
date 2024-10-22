@@ -17,6 +17,7 @@ def grafica(x0, v0, a, t_total):
     ax.set_ylabel('Posición (m)')
     ax.legend()
     ax.grid(True)
+    fig.canvas.draw_idle() 
 
 #Valores iniciales
 x0_init = 0
@@ -31,9 +32,9 @@ ax_v0 = plt.axes([0.25, 0.2, 0.5, 0.01], facecolor='blue')
 ax_a = plt.axes([0.25, 0.15, 0.5, 0.01], facecolor='blue')
 ax_t_total = plt.axes([0.25, 0.1, 0.5, 0.01], facecolor='blue')
 
-slider_x0 = Slider(ax_x0, 'Posición Inicial (m)', 0.0, 1000000000000000000000000000.0, valinit=x0_init)
-slider_v0 = Slider(ax_v0, 'Velocidad Inicial (m/s)', -1000000000000000000000000000.0, 1000000000000000000000000000.0, valinit=v0_init)
-slider_a = Slider(ax_a, 'Aceleración (m/s^2)', -1000000000000000000000000000.0, 1000000000000000000000000000.0, valinit=a_init)
+slider_x0 = Slider(ax_x0, 'Posición Inicial (m)', 0.0, 10.0, valinit=x0_init)
+slider_v0 = Slider(ax_v0, 'Velocidad Inicial (m/s)', -10.0, 10.0, valinit=v0_init)
+slider_a = Slider(ax_a, 'Aceleración (m/s^2)', -10.0, 10.0, valinit=a_init)
 slider_t_total = Slider(ax_t_total, 'Tiempo (s)', 0.0, 500.0, valinit=t_total_init)
 
 #Actualización gráfica
