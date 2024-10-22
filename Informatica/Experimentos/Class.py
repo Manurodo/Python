@@ -6,7 +6,7 @@ class Person:
         self.notes = []
 
     def introducir(self):
-        return f"Wenas gente, me llamo {self.name} y tengo {self.age} años."
+        return print("Wenas gente, me llamo {self.name} y tengo {self.age} años.")
     
     def añadir_hobby(self, hobby):
         self.hobbies.append(hobby)
