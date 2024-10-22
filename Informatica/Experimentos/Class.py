@@ -1,4 +1,5 @@
 class Person: 
+
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -6,7 +7,7 @@ class Person:
         self.notes = []
 
     def introducir(self):
-        return print("Wenas gente, me llamo {self.name} y tengo {self.age} años.")
+        return f"Wenas gente, me llamo {self.name} y tengo {self.age} años."
     
     def añadir_hobby(self, hobby):
         self.hobbies.append(hobby)
@@ -25,3 +26,6 @@ class Person:
     def añadir_nota(self, note):
         self.notes.append(note)
         return f"{self.name} añadio una nueva nota"
+
+yo = Person("Manuel", 17)
+print 
