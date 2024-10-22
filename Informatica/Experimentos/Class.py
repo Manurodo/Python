@@ -1,5 +1,5 @@
 class Person: 
-    def _init_(self, name, age):
+    def __init__(self, name, age):
         self.name = name
         self.age = age
         self.hobbies = []
@@ -18,9 +18,10 @@ class Person:
         else:
             return f"{self.name} no tiene pasatiempos aún."
         
-    def mostrar_cumpleaños(self):
+    def realizar_cumpleaños(self):
         self.age += 1
         return f"{self.name} tiene {self.age} años"
     
     def añadir_nota(self, note):
         self.notes.append(note)
+        return f"{self.name} añadio una nueva nota"

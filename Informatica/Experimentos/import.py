@@ -1,3 +1,5 @@
-from Fibonacci import generar_fibonacci
+from Class import Person
 
-print (generar_fibonacci (50))
+
+yo = Person("Manuel", 18) 
+yo.introducir
