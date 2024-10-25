@@ -1,3 +1,5 @@
+from datetime import datetime, date
+
 class Compañero: 
     
     aula = "A404"
@@ -26,7 +28,7 @@ class Compañero:
         
     def realizar_cumpleaños(self):
         self.age += 1
-        return f"{self.name} tiene {self.age} años"
+        return f"{self.name} acaba de tener un cumpleaños, ahora tiene {self.age} años"
     
     def añadir_nota(self, note):
         self.notes.append(note)
@@ -37,6 +39,19 @@ class Compañero:
         return f"{self.name} es ahora amigo de {friend}"
     
     def info(self):
-        print(self.name, self.age, self.sex, self.telf, self.hobbies, self.friends, self.notes, )
-        
+        return print(f"{self.name}, {self.age}, {self.sex}, {self.telf}, {self.hobbies}, {self.friends}, {self.notes}") 
 
+class confirmar_fecha:
+    def __init__(self,name, age_cadena):
+
+        self.age_cadena = age_cadena
+        self.name = name
+
+    def confirmar_fecha(self):
+        try:
+            age = datetime.strptime(self.age_cadena, "%Y-%m-%d").date()
+            if age > date.today():
+                return False  # La fecha es futura
+            return True  # La fecha es válida y no es futura
+        except ValueError:
+            return None  # La fecha no es válida

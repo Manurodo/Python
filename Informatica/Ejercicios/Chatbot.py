@@ -1,6 +1,6 @@
 import random
 from datetime import datetime, date
-class chatbot:
+class confirmar_fecha:
     def __init__(self,name, age_cadena):
 
         self.age_cadena = age_cadena

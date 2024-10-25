@@ -6,5 +6,5 @@ def generar_fibonacci (n):
         fib_sequence.append(next_number)
     return fib_sequence
 
-fibonacci_secuence = generar_fibonacci (999)
+fibonacci_secuence = generar_fibonacci (20)
 print (fibonacci_secuence)
