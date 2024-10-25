@@ -1,10 +1,15 @@
-class Person: 
+class Compañero: 
+    
+    aula = "A404"
 
-    def __init__(self, name, age):
+    def __init__(self, name, age, sex, telf):
         self.name = name
         self.age = age
+        self.sex = sex
+        self.telf = telf
         self.hobbies = []
         self.notes = []
+        self.friends = []
 
     def introducir(self):
         return f"Wenas gente, me llamo {self.name} y tengo {self.age} años."
@@ -26,6 +31,12 @@ class Person:
     def añadir_nota(self, note):
         self.notes.append(note)
         return f"{self.name} añadio una nueva nota"
+    
+    def añadir_amigo(self, friend):
+        self.friends.append(friend)
+        return f"{self.name} es ahora amigo de {friend}"
+    
+    def info(self):
+        print(self.name, self.age, self.sex, self.telf, self.hobbies, self.friends, self.notes, )
+        
 
-yo = Person("Manuel", 17)
-print 
