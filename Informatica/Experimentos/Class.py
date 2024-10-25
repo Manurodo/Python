@@ -1,7 +1,22 @@
 from datetime import datetime, date
 
+class confirmar_fecha:
+    def __init__(self,name, age_cadena):
+
+        self.age_cadena = age_cadena
+        self.name = name
+
+    def confirmar_fecha(self):
+        try:
+            age = datetime.strptime(self.age_cadena, "%Y-%m-%d").date()
+            if age > date.today():
+                return False  # La fecha es futura
+            return True  # La fecha es válida y no es futura
+        except ValueError:
+            return None  # La fecha no es válida
+
 class Compañero: 
-    
+
     aula = "A404"
 
     def __init__(self, name, age, sex, telf):
@@ -12,6 +27,7 @@ class Compañero:
         self.hobbies = []
         self.notes = []
         self.friends = []
+        self.date_birth = ()
 
     def introducir(self):
         return f"Wenas gente, me llamo {self.name} y tengo {self.age} años."
@@ -40,18 +56,10 @@ class Compañero:
     
     def info(self):
         return print(f"{self.name}, {self.age}, {self.sex}, {self.telf}, {self.hobbies}, {self.friends}, {self.notes}") 
+    
+    def introducir_cumple(self, confirmar_fecha):
+        return 
 
-class confirmar_fecha:
-    def __init__(self,name, age_cadena):
-
-        self.age_cadena = age_cadena
-        self.name = name
-
-    def confirmar_fecha(self):
-        try:
-            age = datetime.strptime(self.age_cadena, "%Y-%m-%d").date()
-            if age > date.today():
-                return False  # La fecha es futura
-            return True  # La fecha es válida y no es futura
-        except ValueError:
-            return None  # La fecha no es válida
+class Bank_account:
+    def __init__ (self, account):
+        self.account_number = account
