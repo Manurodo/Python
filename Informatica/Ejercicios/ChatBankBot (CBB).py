@@ -4,14 +4,16 @@ print ("Por favor introduzca su MyBank ID")
 print ("Si no tiene un MyBank ID introduzca su nombre y le proporcionaremos un MyBanl ID nuevo")
 
 in_ = input ("|:")
+ID = in_
 try:
     int(in_)
 except:
     ValueError
     name = in_
     ID = randint (11111, 99999)
-    print ("Buenas tardes",name,", soy su asistente personal del Banco MyManueBank")
-    ID = in_
+    print ("Buenas tardes",name,", soy su asistente personal del Banco MyManueBank y su nuevo ID es :", ID)
+    
+
 
 
 Costumer = BankAccount (ID)
