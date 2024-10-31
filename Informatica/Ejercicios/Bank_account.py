@@ -3,7 +3,7 @@ class BankAccount:
         self.acc_num = acc_num
         self.balance = 0
         
-    def introducir(self, ammount):
+    def depositar(self, ammount):
         self.balance = self.balance + ammount
         return (f"el nuevo balance es {self.balance}€")
 
