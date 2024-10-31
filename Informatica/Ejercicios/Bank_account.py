@@ -4,7 +4,7 @@ class BankAccount:
         self.balance = 0
         
     def depositar(self, ammount):
-        ammount = float(ammount)
+        ammount = float (ammount)
         self.balance = self.balance + ammount
         return (f"El nuevo balance es {self.balance}€")
 

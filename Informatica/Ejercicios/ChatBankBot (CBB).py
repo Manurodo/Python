@@ -31,12 +31,12 @@ while True:
 
     if comm == "Depositar" or comm == "1":
         print ("Introduzca cantidad a depositar")
-        quant = int (input ("|:"))
+        quant = float (input ("|:"))
         print (Costumer.depositar(quant))
 
     if comm == "Retirar" or comm == "2":
         print ("Introduzca cantidad a retirar")
-        quant = int (input ("|:"))
+        quant = float (input ("|:"))
         print (Costumer.retirar(quant)) 
 
     if comm == "Comprobar" or comm == "3":
