@@ -71,6 +71,7 @@ print ("h" in frase)    #True
 frase = ("hola gente")
 print ("z" in frase)    #False
 
+
 '''
 String Methods:
 
@@ -83,26 +84,24 @@ strip(): Remove leading and trailing whitespace.
 replace(): Replace one substring with another.
 List Methods:
 
-Lists (list) offer methods for working with ordered collections.
+#Lists (list) offer methods for working with ordered collections.
 Examples:
 append(): Add an item to the end.
 remove(): Remove a specific item.
 sort(): Sort the list in ascending order.
 Dictionary Methods:
 
-Dictionaries (dict) include methods for key-value pair management.
+#Dictionaries (dict) include methods for key-value pair management.
 Examples:
 keys(): Retrieve keys as a list.
 values(): Retrieve values as a list.
 get(): Retrieve a value by key.
 Set Methods:
 
-Sets (set) provide methods for working with unique collections.
+#Sets (set) provide methods for working with unique collections.
 Examples:
 add(): Add an item to the set.
 remove(): Remove a specific item.
 union(): Create a union of two sets.
+
 '''
-
-
-    

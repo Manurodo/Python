@@ -60,6 +60,3 @@ class Compañero:
     def introducir_cumple(self, confirmar_fecha):
         return 
 
-class Bank_account:
-    def __init__ (self, account):
-        self.account_number = account
