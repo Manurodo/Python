@@ -1,4 +1,4 @@
-from Bank_account import BankAccount
+from Class import BankAccount
 from random import randint
 
 print(" ")

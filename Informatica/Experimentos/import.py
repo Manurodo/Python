@@ -1,4 +1,4 @@
-from Class import Person
+from Informatica.Ejercicios.Class import Person
 
 
 yo = Person("Manuel", 18) 

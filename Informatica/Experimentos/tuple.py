@@ -1,5 +1,7 @@
-a= ("a", "b", "c")
-result=a[2]
+list = ("a", "b", "c")
+result = list [2]
 print(result) #c
-x,y,z=a
+x,y,z= list
 print(x) #a
+
+print (y) #b
