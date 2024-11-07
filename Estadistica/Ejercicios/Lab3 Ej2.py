@@ -8,7 +8,7 @@ Y_pred = a*X+b
 R2 = pearson ** 2
 plt.figure(figsize=(10, 10))
 plt.scatter(X,Y)
-plt.plot (X,Y_pred, label=f"Recta de regresión: Y = {a:.2f}X + {b:.2f}")
+plt.plot (X,Y_pred, label=f"Recta de regresión: $y = {a:.2f}x$ + ${b:.2f}$ \n $R^2$ = {R2:.2f} \n Coeficiente de pearson = {pearson:.4f}")
 plt.xlabel ("Distancia (m)")
 plt.ylabel ("Intensidad de Luz (lux)")
 plt.legend()
