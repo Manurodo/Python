@@ -60,9 +60,10 @@ class Compañero:
         return 
 
 class BankAccount:
-    def __init__(self, acc_num):
+    def __init__(self, acc_num, name):
         self.acc_num = acc_num
         self.balance = 0
+        self.name = name
         
     def depositar(self, ammount):
         ammount = float (ammount)
@@ -80,3 +81,15 @@ class BankAccount:
     
     def cantidad(self):
         return (f"El balance es: {self.balance}€")
+    
+class Pokemon:
+    def __init__(self, hp, level):
+        self.hp = hp
+        self.level = level
+
+        
+
+
+
+
+

@@ -1,5 +1,5 @@
 import random
-from datetime import datetime, date
+from datetime import *
 class confirmar_fecha:
     def __init__(self,name, age_cadena):
 
@@ -31,14 +31,16 @@ while True:
     elif not scam.confirmar_fecha():
         print("¡Ostia chaval! ¡Un viajero del tiempo! Pero no, en serio, por favor, necesito tu fecha de nacimiento.")
 
+    elif scam.confirmar_fecha() is str("underage"):
+        print("Ufff, meterme con los datos de un menor puede ponerme en problemas, mejor dejamos la fecha sin registrar")
+        und = 1
+        break
     else:
+        und = 0
         break  
 
     age = input("Venga, de nuevo, el formato era AAAA-MM-DD, por si acaso tenías dificultades de aprendizaje: ")
     scam.age_cadena = age
-
-print ("Musha grasia por la informacion, este mes trabajamos con traficantes de organos asi que puede que tambien te pida direccion a futuro <3")
-
 
 
 
