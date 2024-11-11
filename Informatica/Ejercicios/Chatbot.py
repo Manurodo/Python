@@ -20,7 +20,7 @@ class confirmar_fecha:
 n_scam = random.randint(20, 99999)
 
 name = input ("Wenas, encantado men. Me llamo Manuel, como te llamas tu? ")
-print ("Encantado",name,"como sea, lo siento por preguntar pero es que necesito tu fecha de nacimiento. Ya es tarde y solo he robado datos de ",n_scam, "personas" )
+print ("Encantado tio, como sea, lo siento por preguntar pero es que necesito tu fecha de nacimiento. Ya es tarde y solo he robado datos de ",n_scam, "personas" )
 age = input ("Cual es tu fecha de nacimiento? AAAA-MM-DD ")
 scam = confirmar_fecha(name, age)
 

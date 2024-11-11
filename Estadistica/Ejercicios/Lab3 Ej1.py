@@ -18,6 +18,3 @@ plt.ylabel ("Energía Cinética (J)")
 plt.title ("Representacion grafica Velocidad, Energía Cinetica")
 plt.legend ()
 plt.show()
-
-print(f"Pendiente (m): {b:.2f}")
-print(f"Intersección (b): {a:.2f}")
