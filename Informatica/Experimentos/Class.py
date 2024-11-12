@@ -18,7 +18,11 @@ class confirmar_fecha:
     def underage(self):
         today = date.today()
         diff = today.year - self.age.year
-        print (diff)
+        if diff > 18:
+            return False
+        else:
+            return True
+
 
 
 class Compañero: 

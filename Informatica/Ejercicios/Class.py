@@ -16,8 +16,13 @@ class confirmar_fecha:
             return None  # La fecha no es válida
         
     def underage(self):
-        today =date.today()
+        today = date.today()
         diff = today.year - self.age.year
+        if diff > 18:
+            return False
+        else:
+            return True
+
 
 
 class Compañero: 

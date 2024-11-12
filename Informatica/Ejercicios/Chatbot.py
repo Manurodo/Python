@@ -17,12 +17,10 @@ while True:
     elif not scam.confirmar_fecha():
         print("¡Ostia chaval! ¡Un viajero del tiempo! Pero no, en serio, por favor, necesito tu fecha de nacimiento.")
 
-    elif scam.confirmar_fecha() is str("underage"):
+    elif scam.underage() is True:
         print("Ufff, meterme con los datos de un menor puede ponerme en problemas, mejor dejamos la fecha sin registrar")
-        und = 1
         break
     else:
-        und = 0
         break  
 
     age = input("Venga, de nuevo, el formato era AAAA-MM-DD, por si acaso tenías dificultades de aprendizaje: ")
