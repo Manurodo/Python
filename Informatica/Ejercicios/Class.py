@@ -1,5 +1,5 @@
 from datetime import datetime, date
-class confirmar_fecha:
+class fecha:
     def __init__(self,name, age_cadena):
 
         self.age_cadena = age_cadena

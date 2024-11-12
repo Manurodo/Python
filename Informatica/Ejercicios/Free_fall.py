@@ -2,6 +2,7 @@ from numpy import *
 print ("input the initial height")
 h = float(input ("|:"))
 print ("input g")
+print ("g = 9.89 for planet earth")
 g = float(input ("|:"))
 t_l = linspace(1, 20, 10, True,) #Creo una lista de valores a partir de linspace
 def calcular_altura(t_l):
