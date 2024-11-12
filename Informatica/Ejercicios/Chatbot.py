@@ -1,20 +1,6 @@
 import random
 from datetime import *
-class confirmar_fecha:
-    def __init__(self,name, age_cadena):
-
-        self.age_cadena = age_cadena
-        self.name = name
-
-    def confirmar_fecha(self):
-        try:
-            age = datetime.strptime(self.age_cadena, "%Y-%m-%d").date()
-            if age > date.today():
-                return False  # La fecha es futura
-            return True  # La fecha es válida y no es futura
-        except ValueError:
-            return None  # La fecha no es válida
-
+from Class import confirmar_fecha
 
 #Objetivo:Encontrar edad y nombre de una persona
 n_scam = random.randint(20, 99999)
@@ -41,7 +27,4 @@ while True:
 
     age = input("Venga, de nuevo, el formato era AAAA-MM-DD, por si acaso tenías dificultades de aprendizaje: ")
     scam.age_cadena = age
-
-
-
-
+print ("gracias, shau")
