@@ -4,7 +4,7 @@ h = float(input ("|:"))
 print ("input g")
 print ("g = 9.89 for planet earth")
 g = float(input ("|:"))
-t_l = linspace(1, 20, 10, True,) #Creo una lista de valores a partir de linspace
+t_l = linspace(1, 10, 10, True,) #Creo una lista de valores a partir de linspace
 def calcular_altura(t_l):
     return [h - (1/2)*g*(t**2) for t in t_l] #Defino la funcion de calcular_altura como una que utiliza la ecuacion de caida libre
 print ("Teniendo un tiempo", t_l,":")
