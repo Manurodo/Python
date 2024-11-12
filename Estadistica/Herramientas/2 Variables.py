@@ -6,6 +6,10 @@ a, b  = np.polyfit(X, Y, 1)
 pearson = np.corrcoef(X, Y)[0, 1]
 Y_pred = a*X+b
 R2 = pearson ** 2
+Y_mean = np.mean(Y)
+SCE = np.sum((Y_pred - Y_mean) ** 2)
+SCT = np.sum((Y - Y_mean) ** 2)
+R2 = SCE / SCT
 plt.figure(figsize=(10, 10))
 plt.scatter(X,Y)
 plt.plot (X,Y_pred, label=f"Recta de regresión: $y = {a:.2f}x$ + ${b:.2f}$ \n Coeficiente de pearson = {pearson:.4f}")
