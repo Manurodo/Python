@@ -1,6 +1,7 @@
 import random
 from datetime import *
-from Class import fecha
+from ..General.Class import fecha
+
 
 #Objetivo:Encontrar edad y nombre de una persona
 n_scam = random.randint(20, 99999)

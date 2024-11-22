@@ -26,7 +26,7 @@ class fecha:
 
 
 class Compañero: 
-    from Class import confirmar_fecha
+    from Informatica.General.Class import confirmar_fecha
 
     aula = "A404"
 
