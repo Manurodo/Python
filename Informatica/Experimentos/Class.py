@@ -1,5 +1,5 @@
 from datetime import datetime, date
-class confirmar_fecha:
+class fecha:
     def __init__(self,name, age_cadena):
 
         self.age_cadena = age_cadena
@@ -26,6 +26,7 @@ class confirmar_fecha:
 
 
 class Compañero: 
+    from Class import confirmar_fecha
 
     aula = "A404"
 
@@ -39,35 +40,36 @@ class Compañero:
         self.friends = []
         self.date_birth = ()
 
-    def introducir(self):
+    def intro(self):
         return f"Wenas gente, me llamo {self.name} y tengo {self.age} años."
     
-    def añadir_hobby(self, hobby):
+    def add_hobby(self, hobby):
         self.hobbies.append(hobby)
         return f"{self.name} añadió {hobby} como un nuevo hobby"
     
-    def mostrar_hobbies(self):
+    def show_hobby(self):
         if self.hobbies:
             return f"Los pasatiempos de {self.name} son: {','.join(self.hobbies)}"
         else:
             return f"{self.name} no tiene pasatiempos aún."
         
-    def realizar_cumpleaños(self):
+    def birthday(self):
         self.age += 1
         return f"{self.name} acaba de tener un cumpleaños, ahora tiene {self.age} años"
     
-    def añadir_nota(self, note):
+    def add_note(self, note):
         self.notes.append(note)
         return f"{self.name} añadio una nueva nota"
     
-    def añadir_amigo(self, friend):
+    def add_friend(self, friend):
         self.friends.append(friend)
         return f"{self.name} es ahora amigo de {friend}"
     
     def info(self):
         return print(f"{self.name}, {self.age}, {self.sex}, {self.telf}, {self.hobbies}, {self.friends}, {self.notes}") 
     
-    def introducir_cumple(self, confirmar_fecha):
+    def date_of_birth(self):
+
         return 
 
 class BankAccount:

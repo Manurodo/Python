@@ -7,8 +7,11 @@ n_scam = random.randint(20, 99999)
 
 name = input ("Wenas, encantado men. Me llamo Manuel, como te llamas tu? ")
 print ("Encantado tio, como sea, lo siento por preguntar pero es que necesito tu fecha de nacimiento. Ya es tarde y solo he robado datos de ",n_scam, "personas" )
-age = input ("Cual es tu fecha de nacimiento? AAAA-MM-DD ")
+print ("Cual es tu fecha de nacimiento? AAAA-MM-DD ")
+age = input ("/>")
+
 scam = fecha(name, age)
+
 
 while True:
     if scam.confirmar_fecha() is None:

@@ -4,8 +4,7 @@ class fecha:
 
         self.age_cadena = age_cadena
         self.name = name
-        age = datetime.strptime(self.age_cadena, "%Y-%m-%d").date()
-        self.age = age
+        self.age = datetime.strptime(self.age_cadena, "%Y-%m-%d").date()
 
     def confirmar_fecha(self):
         try:
