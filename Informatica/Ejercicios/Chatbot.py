@@ -1,6 +1,6 @@
 import random
 from datetime import *
-from ..General.Class import fecha
+from Class import fecha
 
 
 #Objetivo:Encontrar edad y nombre de una persona
