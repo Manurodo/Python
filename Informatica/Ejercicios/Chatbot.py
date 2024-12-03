@@ -1,11 +1,10 @@
 import random
 from datetime import *
 from Class import fecha
-from sympy import true
 
 
 #Objetivo:Encontrar edad y nombre de una persona
-n_scam = random.randint(20, 99999)
+n_scam = random.randint(1, 99999)
 print (" ")
 print ("Wenas, encantado men. Me llamo Manuel, como te llamas tu? ")
 name = input ("/>")
