@@ -19,33 +19,25 @@ scam = fecha(age)
 n = 1
 
 while True:
-
     if scam.valid(age) is None:
-        print (" ")
+        print(" ")
         print("Creo que la fecha que pusiste no existe o no es válida. No pasa nada, todo el mundo se equivoca. Pero como te decía, tengo prisa, así que me puedes decir una fecha válida, por favor.")
-        x = x+1
+        n += 1
 
     elif scam.valid(age) is False:
-        print (" ")
+        print(" ")
         print("¡Ostia chaval! ¡Un viajero del tiempo! Pero no, en serio, por favor, necesito tu fecha de nacimiento.")
-        x = x+1
+        n += 1
 
     elif scam.underage() is True:
-        print (" ")
-        print("Ufff, meterme con los datos de un menor puede ponerme en problemas, mejor dejamos la fecha sin registrar")
+        print(" ")
+        print("Ufff, meterme con los datos de un menor puede ponerme en problemas, mejor dejamos la fecha sin registrar.")
         break
-    elif x >= 3:
-        print (" ")
-        print ("Ok, im starting to think that you're kidding me, its the police on the line?")
-        print ("Not that I care, im just a chatbot")
-    elif x >= 5:
-        print (" ")
-        print ("oK, im done, bye")
-        break
+
     else:
-        print (" ")
-        print ("gracias, shau")
-        break  
+        print(" ")
+        print("Gracias, chau.")
+        break
     
     print (" ")
     print ("Venga, de nuevo, el formato era AAAA-MM-DD, por si acaso tenías dificultades de aprendizaje: ")
