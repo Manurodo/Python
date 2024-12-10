@@ -8,9 +8,10 @@ print ("Si no tiene un MyBank ID introduzca su nombre y le proporcionaremos un M
 print(" ")
 
 in_ = input ("|:") #Introduce ID necesaria para la implementacion de la clase
-ID = in_
+
 try:
     int(in_) #Si no introduces un numero se considera que elegiste no escribir el ID y se genera uno nuevo
+    ID = in_
 except:
     ValueError
     name = in_
@@ -20,7 +21,7 @@ except:
     print(" ")
 else:
     print(" ")
-    print ("Buenas tardes Client ID nº",ID,"soy su asistente personal del Banco MyManueBank")
+    print ("Buenas tardes Client ID nº",in_,"soy su asistente personal del Banco MyManueBank")
 
 Costumer = BankAccount (ID)
 while True:
