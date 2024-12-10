@@ -7,7 +7,7 @@ print(" ")
 print ("Si no tiene un MyBank ID introduzca su nombre y le proporcionaremos un MyBank ID nuevo")
 print(" ")
 
-in_ = input ("|:") #Introduce ID necesaria para la implementacion de la clase
+in_ = input ("|: ") #Introduce ID necesaria para la implementacion de la clase
 
 try:
     int(in_) #Si no introduces un numero se considera que elegiste no escribir el ID y se genera uno nuevo
@@ -33,7 +33,7 @@ while True:
     print ("3.Comprobar: Compruebe el balance de su cuenta")
     print ("4.Salir: Si quiere salir del programa")
     print(" ")
-    comm = input ("|:")
+    comm = input ("|: ")
 
     while comm not in ["1", "2", "3", "4" , "Depositar", "Retirar", "Comprobar", "Salir"]: 
         print(" ")
